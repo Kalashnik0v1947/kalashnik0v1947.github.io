@@ -274,15 +274,13 @@ p {
   margin: 0 0 2em 0;
 }
 
-h1
-{
-	color: white;
-	text-shadow: 4px 3px #ca9374;
-	font-weight: bold;
-	line-height: 1.5;
-	margin: 0 0 0.5em 0;
-  }
-  
+h1 {
+  color: white;
+  text-shadow: 2px 2px #ca9374;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0 0 0.5em 0;
+}
 
 h2,
 h3,
@@ -3951,7 +3949,7 @@ body.is-preload #sidebar nav ul li {
 
 #intro p {
   font-size: 1.5em;
-  text-shadow: 2px 2px 4px #000000
+  text-shadow: 2px 2px 3px black;
 }
 
 @media screen and (max-width: 980px) {
