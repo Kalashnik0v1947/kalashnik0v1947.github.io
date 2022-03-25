@@ -33,16 +33,30 @@
 	// Forms.
 
 		// Hack: Activate non-input submits.
-			$('form').on('click', '.submit', function(event) {
 
-				// Stop propagation, default.
-					event.stopPropagation();
-					event.preventDefault();
+		$('#myForm').on('submit', function(event) {
+event.preventDefault(); // prevent reload
 
-				// Submit form.
-					$(this).parents('form').submit();
+var formData = new FormData(this);
+formData.append('service_id', 'service_718we4t');
+formData.append('template_id', 'template_52z9ecf');
+formData.append('user_id', '4NJsSNvJ5xZgkd0q9');
 
-			});
+$.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+  type: 'POST',
+  data: formData,
+  contentType: false, // auto-detection
+  processData: false // no need to parse formData to string
+}).done(function() {
+  alert('Your mail is sent!');
+}).fail(function(error) {
+  alert('Oops... ' + JSON.stringify(error));
+});
+});
+		
+	   
+						
+	
 
 	// Sidebar.
 		if ($sidebar.length > 0) {
